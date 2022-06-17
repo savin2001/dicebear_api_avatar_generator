@@ -99,7 +99,7 @@ function App() {
                                                                         }}
                                                                         id="first-name"
                                                                         autoComplete="given-name"
-                                                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
+                                                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -112,7 +112,7 @@ function App() {
                                                                 type="button"
                                                                 className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                                             >
-                                                                Save
+                                                                update
                                                             </button>
                                                         </div>
                                                     </div>
