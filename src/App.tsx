@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { saveAs } from "file-saver";
 
 function App() {
     // Generating random avatar on login
@@ -16,7 +17,6 @@ function App() {
         return text;
     };
     if (text.length === 0) {
-      
         makeId();
     } else {
     }
@@ -33,6 +33,11 @@ function App() {
     const handleAvatar = () => {
         setAvatar(user);
         setUser("");
+    };
+
+    const saveFile = () => {
+        console.log(apiPic);
+        saveAs(apiPic, `${avatar}.svg`);
     };
     return (
         <>
@@ -132,6 +137,24 @@ function App() {
                                                                 PNG, JPG, GIF up
                                                                 to 10MB
                                                             </p>
+                                                            <div className="py-5">
+                                                                <p className="text-xs text-blue-400 ">
+                                                                    File is
+                                                                    downloaded
+                                                                    as svg
+                                                                </p>
+                                                            </div>
+                                                            <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                                                <button
+                                                                    onClick={
+                                                                        saveFile
+                                                                    }
+                                                                    type="button"
+                                                                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                                >
+                                                                    download
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -139,6 +162,19 @@ function App() {
                                         ) : (
                                             <>
                                                 <div>
+                                                    <div className="py-5">
+                                                        <p className="text-sm text-gray-400 ">
+                                                            You can generate
+                                                            random avatars by
+                                                            refreshing the page
+                                                            or you can click the{" "}
+                                                            <i>change button</i>{" "}
+                                                            and fill in random
+                                                            string
+                                                            characters/words to
+                                                            get new ones
+                                                        </p>
+                                                    </div>
                                                     <label className="block text-sm font-medium text-gray-700">
                                                         Random avatar
                                                     </label>
@@ -156,6 +192,22 @@ function App() {
                                                                 PNG, JPG, GIF up
                                                                 to 10MB
                                                             </p>
+                                                            <div className="py-5">
+                                                                <p className="text-xs text-blue-400 ">
+                                                                    File is
+                                                                    downloaded
+                                                                    as svg
+                                                                </p>
+                                                            </div>
+                                                            <button
+                                                                onClick={
+                                                                    saveFile
+                                                                }
+                                                                type="button"
+                                                                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                            >
+                                                                download
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
