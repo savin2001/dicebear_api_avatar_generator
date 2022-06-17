@@ -23,7 +23,8 @@ function App() {
     const [open, setOpen] = useState(false);
     const [user, setUser] = useState("");
     const [avatar, setAvatar] = useState(text);
-    const apiPic = `https://avatars.dicebear.com/api/adventurer/${avatar}.svg`;
+    const [avatarCategory, setAvatarCategory] = useState("adventurer");
+    const apiPic = `https://avatars.dicebear.com/api/${avatarCategory}/${avatar}.svg`;
 
     // Toggles the avatar input
     const showAvatarDetails = () => {
@@ -80,6 +81,90 @@ function App() {
                                                     <div className="shadow overflow-hidden sm:rounded-md">
                                                         <div className="px-4 py-5 bg-white sm:p-6">
                                                             <div className="grid grid-cols-6 gap-6">
+                                                                <div className="col-span-6 sm:col-span-3">
+                                                                    <label
+                                                                        htmlFor="first-name"
+                                                                        className="block text-sm font-medium text-gray-700"
+                                                                    >
+                                                                        Avatar
+                                                                        category
+                                                                    </label>
+                                                                    <select
+                                                                        value={
+                                                                            avatarCategory
+                                                                        }
+                                                                        onChange={(
+                                                                            e
+                                                                        ) => {
+                                                                            setAvatarCategory(
+                                                                                e
+                                                                                    .target
+                                                                                    .value
+                                                                            );
+                                                                        }}
+                                                                        id="countries"
+                                                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                                    >
+                                                                        <option
+                                                                            selected
+                                                                        >
+                                                                            Choose
+                                                                            a
+                                                                            category
+                                                                        </option>
+                                                                        <option value="adventurer">
+                                                                            adventurer
+                                                                        </option>
+                                                                        <option value="adventurer-neutral">
+                                                                            adventurer-neutral
+                                                                        </option>
+                                                                        <option value="avataaars">
+                                                                            avataaars
+                                                                        </option>
+                                                                        <option value="big-ears">
+                                                                            big-ears
+                                                                        </option>
+                                                                        <option value="big-ears-neutral">
+                                                                            big-ears-neutral
+                                                                        </option>
+                                                                        <option value="big-smile">
+                                                                            big-smile
+                                                                        </option>
+                                                                        <option value="bottts">
+                                                                            bottts
+                                                                        </option>
+                                                                        <option value="croodles">
+                                                                            croodles
+                                                                        </option>
+                                                                        <option value="croodles-neutral">
+                                                                            croodles-neutral
+                                                                        </option>
+                                                                        <option value="identicon">
+                                                                            identicon
+                                                                        </option>
+                                                                        <option value="initials">
+                                                                            initials
+                                                                        </option>
+                                                                        <option value="micah">
+                                                                            micah
+                                                                        </option>
+                                                                        <option value="miniavs">
+                                                                            miniavs
+                                                                        </option>
+                                                                        <option value="open-peeps">
+                                                                            open-peeps
+                                                                        </option>
+                                                                        <option value="personas">
+                                                                            personas
+                                                                        </option>
+                                                                        <option value="pixel-art">
+                                                                            pixel-art
+                                                                        </option>
+                                                                        <option value="pixel-art-neutral">
+                                                                            pixel-art-neutral
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
                                                                 <div className="col-span-6 sm:col-span-3">
                                                                     <label
                                                                         htmlFor="first-name"
