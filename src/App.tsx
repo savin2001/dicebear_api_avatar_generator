@@ -253,7 +253,7 @@ function App() {
                                                             random avatars by
                                                             refreshing the page
                                                             or you can click the{" "}
-                                                            <i>change button</i>{" "}
+                                                            <i className="text-blue-400 font-bold">change button</i>{" "}
                                                             and fill in random
                                                             string
                                                             characters/words to
